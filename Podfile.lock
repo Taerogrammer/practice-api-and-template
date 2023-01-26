@@ -1,0 +1,32 @@
+PODS:
+  - NMapsGeometry (1.0.1)
+  - NMapsMap (3.16.1):
+    - NMapsGeometry
+  - Pageboy (4.0.2)
+  - SideMenu (6.5.0)
+  - Tabman (3.0.1):
+    - Pageboy (~> 4.0.2)
+
+DEPENDENCIES:
+  - NMapsMap
+  - SideMenu
+  - Tabman (~> 3.0)
+
+SPEC REPOS:
+  trunk:
+    - NMapsGeometry
+    - NMapsMap
+    - Pageboy
+    - SideMenu
+    - Tabman
+
+SPEC CHECKSUMS:
+  NMapsGeometry: 53c573ead66466681cf123f99f698dc8071a4b83
+  NMapsMap: 926c3a303d381a24bec8da3cd6e198f50af93ae9
+  Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  Tabman: a5880789298f81d3f2cdd6510b54ae637cfd8e09
+
+PODFILE CHECKSUM: 36b26f644937715c718610a91f5f4654d95402bd
+
+COCOAPODS: 1.11.3

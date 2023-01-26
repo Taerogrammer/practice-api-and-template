@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="PracticeTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nQ-hu-6Fa">
+                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="P8c-TF-ZQ6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-iR-c3O">
+                                <rect key="frame" x="0.0" y="179" width="393" height="639"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="영화 제목을 검색하세요" translatesAutoresizingMaskIntoConstraints="NO" id="gRR-Ce-Nig">
+                                        <rect key="frame" x="0.0" y="15" width="393" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="PE1-8E-uUw"/>
+                                        </connections>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n1f-IY-xPL">
+                                        <rect key="frame" x="0.0" y="71" width="393" height="568"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NaverTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NaverTableViewCell" id="znA-nj-4sh" customClass="NaverTableViewCell" customModule="PracticeTemplate" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znA-nj-4sh" id="w38-i0-KKH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="n1f-IY-xPL" secondAttribute="trailing" id="2Gc-uB-vDY"/>
+                                    <constraint firstItem="n1f-IY-xPL" firstAttribute="top" secondItem="gRR-Ce-Nig" secondAttribute="bottom" id="3Vu-0v-rDm"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1f-IY-xPL" secondAttribute="bottom" id="DBA-Q3-Zos"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRR-Ce-Nig" secondAttribute="trailing" id="ENC-o0-W9S"/>
+                                    <constraint firstItem="gRR-Ce-Nig" firstAttribute="top" secondItem="uGy-iR-c3O" secondAttribute="top" constant="15" id="PNU-Hb-pf0"/>
+                                    <constraint firstItem="gRR-Ce-Nig" firstAttribute="leading" secondItem="uGy-iR-c3O" secondAttribute="leading" id="vD1-CF-376"/>
+                                    <constraint firstItem="n1f-IY-xPL" firstAttribute="leading" secondItem="uGy-iR-c3O" secondAttribute="leading" id="yPv-DC-gT1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0nQ-hu-6Fa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0TJ-fh-A1i"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uGy-iR-c3O" secondAttribute="trailing" id="LCk-VZ-NUi"/>
+                            <constraint firstItem="uGy-iR-c3O" firstAttribute="top" secondItem="0nQ-hu-6Fa" secondAttribute="bottom" id="VNJ-QU-CU8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0nQ-hu-6Fa" secondAttribute="trailing" id="a5G-Si-5nE"/>
+                            <constraint firstItem="uGy-iR-c3O" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gWT-ac-O1J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="uGy-iR-c3O" secondAttribute="bottom" id="hiH-99-a4s"/>
+                            <constraint firstItem="0nQ-hu-6Fa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wlM-qD-vBh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="gRR-Ce-Nig" id="Q37-TB-4cQ"/>
+                        <outlet property="searchTableView" destination="n1f-IY-xPL" id="xur-ro-4ej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
