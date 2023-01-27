@@ -20,9 +20,7 @@ class FoodViewController : UIViewController {
         super.viewDidLoad()
         searchBar.delegate = self
     }
-    
-    //안뇽
-    
+        
 
 }
 

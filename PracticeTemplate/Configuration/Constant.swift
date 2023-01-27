@@ -19,6 +19,8 @@ struct Constant {
     static let Food_URL = "https://openapi.gg.go.kr/PlaceThatDoATasteyFoodSt?"
     
     static let Weather_URL = "http://api.openweathermap.org/data/2.5/weather?"
+    
+    static let Login_URL = "http://dev.hyukk.shop:9000"
 }
 
 

@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FJ5-jM-fT0">
-                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="6b7-Fj-8xz"/>
+                                    <constraint firstAttribute="height" constant="60" id="6b7-Fj-8xz"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TfQ-3S-RkA">
-                                <rect key="frame" x="0.0" y="179" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="pu8-eq-fXK"/>

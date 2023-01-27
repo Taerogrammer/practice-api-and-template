@@ -65,6 +65,13 @@
 		5AF6C846297C0DCA00C9369E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF6C844297C0DCA00C9369E /* Main.storyboard */; };
 		5AF6C848297C0DCB00C9369E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF6C847297C0DCB00C9369E /* Assets.xcassets */; };
 		5AF6C84B297C0DCB00C9369E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF6C849297C0DCB00C9369E /* LaunchScreen.storyboard */; };
+		5AFD375C298257B60021DA18 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD375B298257B60021DA18 /* SignInResponse.swift */; };
+		5AFD375E298258D70021DA18 /* SignInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD375D298258D70021DA18 /* SignInRequest.swift */; };
+		5AFD376129825B6B0021DA18 /* SignInDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD376029825B6B0021DA18 /* SignInDataManager.swift */; };
+		5AFD3763298272070021DA18 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD3762298272070021DA18 /* RegisterRequest.swift */; };
+		5AFD376C298273490021DA18 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD376B298273490021DA18 /* RegisterViewController.swift */; };
+		5AFD376E2982784B0021DA18 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD376D2982784B0021DA18 /* RegisterDataManager.swift */; };
+		5AFD3770298279500021DA18 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD376F298279500021DA18 /* RegisterResponse.swift */; };
 		C2F4C5F1580FF74674A4C94E /* Pods_PracticeTemplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A24056783962A0FE14E84B6 /* Pods_PracticeTemplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +127,13 @@
 		5AF6C847297C0DCB00C9369E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF6C84A297C0DCB00C9369E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AF6C84C297C0DCB00C9369E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AFD375B298257B60021DA18 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		5AFD375D298258D70021DA18 /* SignInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequest.swift; sourceTree = "<group>"; };
+		5AFD376029825B6B0021DA18 /* SignInDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInDataManager.swift; sourceTree = "<group>"; };
+		5AFD3762298272070021DA18 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		5AFD376B298273490021DA18 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5AFD376D2982784B0021DA18 /* RegisterDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
+		5AFD376F298279500021DA18 /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		7A24056783962A0FE14E84B6 /* Pods_PracticeTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4193DD4B32F018C7F3E8CAB /* Pods-PracticeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-PracticeTemplate/Pods-PracticeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,7 +172,7 @@
 		5A0F79FD297F7830006AEE0F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5A85C8A5297F7C220052E9F0 /* Entity */,
+				5AFD3764298272930021DA18 /* Register */,
 				5A0F79FE297F78A4006AEE0F /* Main */,
 				5A0F79FF297F78B9006AEE0F /* Home */,
 				5AE5FB83297F7B38007E683C /* EventView */,
@@ -172,9 +186,9 @@
 		5A0F79FE297F78A4006AEE0F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5AF6C842297C0DCA00C9369E /* ViewController.swift */,
 				5A4A0944297CFD1400B4F9D0 /* MainViewController.swift */,
 				5AF6C844297C0DCA00C9369E /* Main.storyboard */,
+				5AFD375F29825B530021DA18 /* SignIn */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 		5A0F79FF297F78B9006AEE0F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD3766298272D00021DA18 /* Entity */,
 				5A4A094F297D09E200B4F9D0 /* HomeViewController.storyboard */,
 				5A4A094B297D054700B4F9D0 /* HomeViewController.swift */,
 				5A85C8A8297F7D590052E9F0 /* BoxOfficeViewController.swift */,
@@ -195,6 +210,7 @@
 		5A0F7A00297F795B006AEE0F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD3767298272E70021DA18 /* Entity */,
 				5A4A0953297D0F0000B4F9D0 /* SearchViewController.swift */,
 				5A5AE918297F7A7200D7DA44 /* SearchViewController.storyboard */,
 			);
@@ -281,20 +297,10 @@
 			path = MapView;
 			sourceTree = "<group>";
 		};
-		5A85C8A5297F7C220052E9F0 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				5A85C8A6297F7C450052E9F0 /* MovieResponse.swift */,
-				5A85C8AE297FBB020052E9F0 /* NaverResponse.swift */,
-				5A85C8C6298145830052E9F0 /* FoodResponse.swift */,
-				5A85C8CD2982038D0052E9F0 /* WeatherResponse.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		5A85C8C1298144CC0052E9F0 /* Food */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD3768298272F10021DA18 /* Entity */,
 				5A85C8C2298144D90052E9F0 /* FoodViewController.swift */,
 				5A85C8C4298144E10052E9F0 /* FoodViewController.storyboard */,
 			);
@@ -304,6 +310,7 @@
 		5A85C8C8298202520052E9F0 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				5AFD3769298273000021DA18 /* Entity */,
 				5A85C8C9298202620052E9F0 /* WeatherViewController.swift */,
 				5A85C8D2298218920052E9F0 /* WeatherDataManager.swift */,
 				5A85C8CB298202820052E9F0 /* WeatherViewController.storyboard */,
@@ -363,6 +370,76 @@
 				5AF6C84C297C0DCB00C9369E /* Info.plist */,
 			);
 			path = PracticeTemplate;
+			sourceTree = "<group>";
+		};
+		5AFD375F29825B530021DA18 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				5AF6C842297C0DCA00C9369E /* ViewController.swift */,
+				5AFD376029825B6B0021DA18 /* SignInDataManager.swift */,
+				5AFD3765298272B40021DA18 /* Entity */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		5AFD3764298272930021DA18 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5AFD376B298273490021DA18 /* RegisterViewController.swift */,
+				5AFD376D2982784B0021DA18 /* RegisterDataManager.swift */,
+				5AFD376A2982731D0021DA18 /* Entity */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5AFD3765298272B40021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5AFD375B298257B60021DA18 /* SignInResponse.swift */,
+				5AFD375D298258D70021DA18 /* SignInRequest.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5AFD3766298272D00021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A85C8A6297F7C450052E9F0 /* MovieResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5AFD3767298272E70021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A85C8AE297FBB020052E9F0 /* NaverResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5AFD3768298272F10021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A85C8C6298145830052E9F0 /* FoodResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5AFD3769298273000021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A85C8CD2982038D0052E9F0 /* WeatherResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5AFD376A2982731D0021DA18 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5AFD3762298272070021DA18 /* RegisterRequest.swift */,
+				5AFD376F298279500021DA18 /* RegisterResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		F1170D0515E3EE3A36602EF9 /* Frameworks */ = {
@@ -514,6 +591,7 @@
 			files = (
 				5A85C8B92980F3920052E9F0 /* NaverKey.swift in Sources */,
 				5AF6C843297C0DCA00C9369E /* ViewController.swift in Sources */,
+				5AFD3770298279500021DA18 /* RegisterResponse.swift in Sources */,
 				5A4A095C297D199B00B4F9D0 /* SideMenuNavigation.swift in Sources */,
 				5A85C8AB297F7DF20052E9F0 /* BoxOfficeDataManager.swift in Sources */,
 				5A85C8C7298145830052E9F0 /* FoodResponse.swift in Sources */,
@@ -525,13 +603,17 @@
 				5A85C8CA298202620052E9F0 /* WeatherViewController.swift in Sources */,
 				5A4A093E297CF08500B4F9D0 /* UINavigationBar.swift in Sources */,
 				5A4A0942297CF79700B4F9D0 /* Device.swift in Sources */,
+				5AFD3763298272070021DA18 /* RegisterRequest.swift in Sources */,
 				5A8D3C49297ED6B6007BA5A9 /* HomeBannerCell.swift in Sources */,
+				5AFD376C298273490021DA18 /* RegisterViewController.swift in Sources */,
 				5A4A093C297CF07800B4F9D0 /* UIViewController.swift in Sources */,
 				5A8D3C4B297EE81E007BA5A9 /* HomeSegViewController.swift in Sources */,
+				5AFD376E2982784B0021DA18 /* RegisterDataManager.swift in Sources */,
 				5A4A0958297D0FD400B4F9D0 /* MapViewController.swift in Sources */,
 				5A4A0931297CEF7700B4F9D0 /* UIFont.swift in Sources */,
 				5A85C8AD297F82510052E9F0 /* MovieViewController.swift in Sources */,
 				5A4A0938297CF03400B4F9D0 /* UIColor.swift in Sources */,
+				5AFD375C298257B60021DA18 /* SignInResponse.swift in Sources */,
 				5A4A0945297CFD1400B4F9D0 /* MainViewController.swift in Sources */,
 				5A85C8A7297F7C450052E9F0 /* MovieResponse.swift in Sources */,
 				5A4A093A297CF04000B4F9D0 /* UIButton.swift in Sources */,
@@ -540,12 +622,14 @@
 				5A4A094C297D054700B4F9D0 /* HomeViewController.swift in Sources */,
 				5A85C8CE2982038D0052E9F0 /* WeatherResponse.swift in Sources */,
 				5A85C8AF297FBB020052E9F0 /* NaverResponse.swift in Sources */,
+				5AFD376129825B6B0021DA18 /* SignInDataManager.swift in Sources */,
 				5A4A0954297D0F0000B4F9D0 /* SearchViewController.swift in Sources */,
 				5A4A091F297CEB1E00B4F9D0 /* Constant.swift in Sources */,
 				5A85C8C3298144D90052E9F0 /* FoodViewController.swift in Sources */,
 				5AF6C83F297C0DCA00C9369E /* AppDelegate.swift in Sources */,
 				5A4A0936297CF01D00B4F9D0 /* String.swift in Sources */,
 				5AF6C841297C0DCA00C9369E /* SceneDelegate.swift in Sources */,
+				5AFD375E298258D70021DA18 /* SignInRequest.swift in Sources */,
 				5A4A094E297D054F00B4F9D0 /* EventViewController.swift in Sources */,
 				5A85C8D0298203DA0052E9F0 /* WeatherKey.swift in Sources */,
 			);

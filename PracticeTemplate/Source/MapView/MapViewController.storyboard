@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHF-e3-s1Z">
-                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="dgY-GV-QmO"/>
+                                    <constraint firstAttribute="height" constant="60" id="dgY-GV-QmO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHk-9N-soS">
-                                <rect key="frame" x="0.0" y="179" width="393" height="639"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>

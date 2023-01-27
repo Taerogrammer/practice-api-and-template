@@ -28,6 +28,8 @@ class MainViewController : TabmanViewController {
         super.viewDidLoad()
         
         tapmanSetting()
+        print("main view did load")
+        navigationBarSetting()
 
 
         
@@ -67,20 +69,111 @@ class MainViewController : TabmanViewController {
          bar.layout.alignment = .centerDistributed
          bar.layout.contentMode = .fit
          bar.layout.interButtonSpacing = 16 // 버튼 사이 간격
-     
          bar.layout.transitionStyle = .snap // Customize
         
         tapmanView.tintColor = .red
-
          // Add to view
          addBar(bar, dataSource: self, at: .custom(view: tapmanView, layout: nil))
-        
-        
-        
         
     }
     
 
+    //MARK: navigationbar setting
+    func navigationBarSetting() {
+        let buttonImage1 = UIImage(named: "mainNav1")!
+
+        let button1 = UIButton(frame: CGRect(
+            x: 0,
+            y: 0,
+            width: buttonImage1.size.width,
+            height: buttonImage1.size.height))
+        button1.setImage(buttonImage1, for: .normal)
+        
+
+        button1.addTarget(
+            self,
+            action: #selector(self.onclickSideMenu(_:)),
+            for: .touchUpInside
+        )
+        
+
+        let barbuttonItem1 = UIBarButtonItem(customView: button1)
+
+        
+        let buttonImage2 = UIImage(named: "mainNav2")!
+
+        let button2 = UIButton(frame: CGRect(
+            x: 0,
+            y: 0,
+            width: buttonImage2.size.width,
+            height: buttonImage2.size.height))
+        button2.setImage(buttonImage2, for: .normal)
+        button2.addTarget(self, action: #selector(onclickPopcorn), for: .touchUpInside)
+        
+
+        let barbuttonItem2 = UIBarButtonItem(customView: button2)
+        
+        let buttonImage3 = UIImage(named: "mainNav3")!
+
+        let button3 = UIButton(frame: CGRect(
+            x: 0,
+            y: 0,
+            width: buttonImage3.size.width,
+            height: buttonImage3.size.height))
+        button3.setImage(buttonImage3, for: .normal)
+        
+
+        let barbuttonItem3 = UIBarButtonItem(customView: button3)
+        
+
+        
+        let backImage = UIImage(named: "mainBackBtn")!
+
+        let backBtn = UIButton(frame: CGRect(
+            x: 0,
+            y: 0,
+            width: backImage.size.width,
+            height: backImage.size.height))
+
+        backBtn.setImage(backImage, for: .normal)
+        backBtn.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
+
+
+        let barBackButton = UIBarButtonItem(customView: backBtn)
+
+        self.navigationItem.leftBarButtonItem = barBackButton
+        self.navigationItem.rightBarButtonItems = [barbuttonItem1, barbuttonItem2, barbuttonItem3]
+    }
+    
+    @objc func onclickSideMenu(_ sender: AnyObject) {
+        // ...
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "SideMenuNavigation") as! SideMenuNavigation
+        self.navigationController?.show(pushVC, sender: self)
+    }
+    
+    //다른 vc으로 이동하기
+    @objc func onclickPopcorn(_ sender: AnyObject) {
+        
+//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AlarmViewController")
+//        self.navigationController?.pushViewController(pushVC!, animated: true)
+        print("onclickPopcorn")
+
+        
+    }
+    
+    @objc func onClickBack(_ sender: AnyObject) {
+        
+//        let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "ModalViewController")
+//
+//        modalVC?.modalPresentationStyle = .pageSheet
+//        self.present(modalVC!, animated: true, completion: nil)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
+        self.navigationController?.popViewController(animated: true)
+        
+        
+        print("onClickBack")
+        
+    }
 
     
     

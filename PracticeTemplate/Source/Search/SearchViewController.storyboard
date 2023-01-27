@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nQ-hu-6Fa">
-                                <rect key="frame" x="0.0" y="59" width="393" height="120"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="P8c-TF-ZQ6"/>
+                                    <constraint firstAttribute="height" constant="60" id="P8c-TF-ZQ6"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-iR-c3O">
-                                <rect key="frame" x="0.0" y="179" width="393" height="639"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="699"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" placeholder="영화 제목을 검색하세요" translatesAutoresizingMaskIntoConstraints="NO" id="gRR-Ce-Nig">
                                         <rect key="frame" x="0.0" y="15" width="393" height="56"/>
@@ -34,7 +34,7 @@
                                         </connections>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n1f-IY-xPL">
-                                        <rect key="frame" x="0.0" y="71" width="393" height="568"/>
+                                        <rect key="frame" x="0.0" y="71" width="393" height="628"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NaverTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NaverTableViewCell" id="znA-nj-4sh" customClass="NaverTableViewCell" customModule="PracticeTemplate" customModuleProvider="target">
